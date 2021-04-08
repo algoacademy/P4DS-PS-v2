@@ -1,0 +1,127 @@
+---
+title: "Kuis P4DS-PS"
+author: "Team Algoritma"
+date: "`r format(Sys.Date(), '%B %e, %Y')`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Kuis ini merupakan bagian dari proses penilaian *Algoritma Academy*. Selamat Anda sudah menyelesaikan materi *Programming for Data Science* dan *Practical Statistics*! Kami akan melakukan penilaian berupa kuis untuk menguji materi yang sudah dipelajari. Pengerjaan kuis diharapkan dapat dilakukan di dalam kelas, silakan hubungi tim instruktur kami jika Anda melewatkan kesempatan untuk mengambilnya di kelas.
+
+# Petunjuk
+
+Pada kuis ini, kita akan menggunakan dataset retail. Anda dapat menemukan file CSV yang disimpan dalam folder `datainput` dengan nama file `retail.csv`. Data ini merupakan catatan transaksi toko eceran (retail) yang memiliki beberapa variabel. Silakan lihat glosarium berikut sebagai petunjuk Anda:
+
+- `Order.ID`: Id Pemesanan.    
+- `Order.Date`: Tanggal Pemesanan.   
+- `Ship.Date`: Tanggal Pengiriman.    
+- `Ship.Mode`: Jenis Pengiriman; memiliki 4 kategori/*levels* ("First Class", "Same Day", "Second Class", "Standard Class")   
+- `Customer.ID`: Id Pelanggan.   
+- `Segment` : Segmen Pelanggan: memiliki 3 kategori/*levels* ("Consumer", "Corporate", "Home Office")   
+- `Product.ID`: Id Produk.    
+- `Category` : Kategori Produk; memilki 3 jenis/*levels* ("Furniture", "Office Supplies", "Technology").    
+- `Sub.Category`: Kategori produk yang lebih spesifik.    
+- `Product.Name`: Nama produk yang terjual.    
+- `Sales`: Penghasilan yang didapatkan setiap penjualan.
+- `Quantity`: Jumlah barang yang terjual.    
+- `Discount`: Besarnya diskon yang diberikan untuk setiap penjualan.    
+- `Profit`: Keuntungan yang didapatkan perusahaan untuk setiap penjualan.    
+
+```{r}
+# baca dan periksa data disini
+
+```
+
+Kami akan membagi kuis ini menjadi 2 bagian utama : *Programming for Data Science* dan *Practical Statistics*, masing-masing bagian menguji pengetahuan yang telah dipelajari dalam 2 materi tersebut.
+
+## Programming for Data Science
+
+1. Di antara data transaksi retail di atas, sebagaian besar barang dikirim menggunakan jenis pengiriman "Standard Class". Namun, kita lebih tertarik untuk mengetahui berapa banyak transaksi yang menghasilkan penjualan (*Sales*) di atas rata-rata dan dikirim menggunakan jenis pengiriman selain "Standard Class". Gunakan *conditional subsetting* untuk mengetahui jumlah transaksi dengan kondisi tersebut!
+  - [ ] 337
+  - [ ] 948
+  - [ ] 2034
+  - [ ] 4026
+  
+```{r}
+# code Here
+
+```
+
+
+2. Jika Anda melihat kolom `Category`, Anda akan melihat terdapat beberapa kategori produk. Di antara semua jenis pengiriman yang tersedia, jenis pengiriman apa yang paling banyak digunakan oleh ketegori produk *Office Supplies*?
+  - [ ] First Class
+  - [ ] Same Day
+  - [ ] Second Class
+  - [ ] Standard Class
+  
+```{r}
+# code here
+
+```
+
+
+3. Jika kita menganalisis subkategori produk yang dibeli oleh segmen pelanggan (*Corporate*), manakah yang merupakan 3 subkategori yang paling menguntungkan, dengan mempertimbangkan total profit yang diperoleh dari setiap subkategori?
+  - [ ] Copiers, Accessories, Phones
+  - [ ] Copiers, Phones, Paper
+  - [ ] Tables, Fasteners, Supplies 
+  - [ ] Tables, Supplies, Bookcases
+  
+```{r}
+# code here
+
+```
+
+
+## Practical Statistics
+
+4. Dalam statistik deskriptif, ada dua ukuran utama yang biasa digunakan untuk mendeskripsikan distribusi data: ukuran pemusatan dan ukuran persebaran. Pengukuran statistik mana yang dapat digunakan untuk menggambarkan ukuran yang pertama dan sensitif terhadap outlier? 
+  - [ ] Range
+  - [ ] IQR
+  - [ ] Mean
+  - [ ] Median
+ 
+  
+5. Temukan korelasi antara Penjualan (*Sales*) dan kuantitas barang yang terjual (*Quantity*) dari transaksi yang ada menggunakan fungsi `cor ()`. Berdasarkan korelasi antara keduanya, manakah dari pernyataan berikut yang benar?
+  - [ ] Korelasi = 0.8, Quantity dan Sales berhubungan positif
+  - [ ] Korelasi = -0.2, ketika Quantity meningkat Sales juga ikut meningkat
+  - [ ] Korelasi = 0.8, Quantity dan Sales tidak saling berhubungan
+  - [ ] Korelasi = 0.2, ketika Quantity meningkat Sales juga ikut meningkat
+
+*Referensi Opsi Bahasa Inggris:*
+  - [ ] Correlation = 0.8, Quantity and Sales are positively related
+  - [ ] Correlation = -0.2, when Quantity increases Sales also increases
+  - [ ] Correlation = 0.8, Quantity and Sales are not related
+  - [ ] Correlation = 0.2, when Quantity increases Sales also increases
+  
+```{r}
+# code here
+
+```
+
+
+6. Pertimbangkan kasus ini: Sebuah perusahaan retail ingin menerapkan promosi untuk meningkatkan jumlah penjualan. Berdasarkan catatan historis, kita mengetahui bahwa populasi penjualan bulanan memiliki rata-rata 228.61 USD dengan standar deviasi 26.24 USD dan berdistribusi normal. Setelah promosi diterapkan selama sebulan, perusahaan meperoleh rata-rata penjualan sebesar 294.55 USD. Dengan menggunakan selang kepercayaan 95%, lakukan uji signifikansi menggunakan *z-test* untuk mengetahui apakah promosi yang dilakukan mempengaruhi penjualan secara signifikan. Apa kesimpulan yang dapat diambil, berdasarkan informasi yang diberikan? 
+  - [ ] Tolak hipotesis nol (H0), promosi tidak berpengaruh signifikan terhadap penjualan
+  - [ ] Tolak hipotesis nol (H0), promosi berpengaruh signifikan terhadap penjualan
+  - [ ] Gagal tolak hipotesis nol (H0), promosi tidak berpengaruh signifikan terhadap penjualan
+  - [ ] Gagal tolak hipotesis nol (H0), promosi berpengaruh signifikan terhadap penjualan
+
+*Referensi Opsi Bahasa Inggris:*
+  - [ ] Reject the null hypothesis, The promotion has no significant effect on sales  
+  - [ ] Reject the null hypothesis, The promotion has significant effect on sales
+  - [ ] Fail to reject the null hypothesis, The promotion has no significant effect on sales
+  - [ ] Fail to reject the null hypothesis, The promotion has significant effect on sales
+  
+I. Hipotesis
+H0: Sales = 228.61 USD (Promosi tidak mempengaruhi penjualan)
+H1: Sales > 228.61 USD (Promosi mempengaruhi penjualan)
+
+II. Statistik
+
+```{r}
+# code Here
+
+```
+
